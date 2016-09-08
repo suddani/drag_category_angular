@@ -1,0 +1,21 @@
+{
+  "name": "drag_category_angular",
+  "authors": [
+    "Suddani <suddani@googlemail.com>"
+  ],
+  "description": "A simple angular directive that displays a category system for sorting",
+  "main": "src/drag_category_angular.js",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.0"
+  }
+}

@@ -1,0 +1,58 @@
+<html ng-app="example">
+  <header>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../src/drag_category_angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <style>
+    .drag-category-container {
+      margin-left: 16px;
+      margin-right: 16px;
+      position: relative;
+    }
+    .drag-category-header {
+      margin: 8px;
+      padding: 8px;
+      padding-left: 16px;
+      padding-right: 32px;
+      background-color: blue;
+      max-width: 128px;
+      text-align: center;
+      position: relative;
+    }
+    .drag-category-header.drag-category-header-pool {
+      padding-right: 16px;
+    }
+    .drag-category-header.drag-category-header-add {
+      padding-right: 16px;
+      cursor: copy;
+    }
+    .drag-category-header-delete {
+      padding: 4px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      font-size: 0.5em;
+      background-color: red;
+    }
+    .drag-category-body {
+      position: relative;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .drag-category-child {
+      margin: 8px;
+      padding: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: red;
+      position: relative;
+      color: green;
+      text-align: center;
+    }
+    </style>
+  </header>
+  <body ng-controller="app">
+    <drag-category categories="categories" elements="elements" no-add-button="false" on-add="addCategory()"></drag-category>
+  </body>
+</html>
