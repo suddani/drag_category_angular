@@ -58,7 +58,8 @@ directive("dragCategory", [function() {
       categories: '=',
       elements: '=',
       noAddButton: "=",
-      onAdd: "&"
+      onAdd: "&",
+      poolName: "="
     },
     transclude: {
         'title': '?paneTitle',
@@ -156,7 +157,7 @@ directive("dragCategory", [function() {
   </div>
 
   <div style="float:left;" class="drag-category-container">
-    <div class="drag-category-header drag-category-header-pool">Pool</div>
+    <div class="drag-category-header drag-category-header-pool">{{poolName||"Pool"}}</div>
     <div class="drag-category-body">
       <div class="drag-category-child" draggable="true" ng-repeat="child in elements track by $index">
         {{child.label}}
